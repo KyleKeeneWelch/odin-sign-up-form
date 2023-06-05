@@ -1,0 +1,151 @@
+:root {
+    --main-color: #596D48;
+    --secondary-color: #5c486d;
+    --input-color: #E5E7EB;
+    --valid-color: #3C37CC;
+    --error-color: #E22121;
+    --grey-color: #64655F;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+a {
+    color: var(--main-color);
+
+    &:hover {
+        color: var(--secondary-color);
+    }
+}
+
+.bg-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    height: 100vh;
+    width: 30vw;
+    background-image: url("images/background.jpg");
+    background-size: cover;
+    float: left;
+    color: white;
+    font-size: 12px;
+
+    & a {
+        color: white;
+
+        &:hover {
+            color: var(--secondary-color);
+        }
+    }
+}
+
+.bg-overlay {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+    background-color: rgba(0,0,0,0.5);
+    position: relative;
+    bottom: 40vh;
+
+    & img {
+        width: 208px;
+        height: 176px;
+    }
+
+    & p {
+        font-size: 60px;
+        font-family: fantasy;
+    }
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 68vw;
+    padding: 5vw;
+    height: 100vh;
+}
+
+.form-column {
+    display: flex;
+    flex-direction: column;
+    float: left;
+    width: 40%;
+
+    &:last-of-type {
+        float: none;
+    }
+}
+
+h1 {
+    color: var(--main-color);
+    font-size: 60px;
+}
+
+h2 {
+    font-weight: 500;
+}
+
+h2:last-of-type {
+    color: var(--grey-color);
+}
+
+label {
+    font-size: 12px;
+    color: var(--grey-color);
+    font-weight: 500;
+}
+
+input {
+    width: 75%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid var(--input-color);
+    font-size: 12px;
+}
+
+button {
+    background-color: var(--main-color);
+    color: white;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: var(--main-color);
+    transition: 0.2s;
+
+    &:hover {
+        background-color: var(--secondary-color);
+        transform: scale(1.1);
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .bg-container {
+        display: none;
+    }
+
+    .form-container {
+        width: 100%;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 48px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+}
