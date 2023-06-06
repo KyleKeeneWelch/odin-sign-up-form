@@ -3,7 +3,7 @@
     --secondary-color: #5c486d;
     --input-color: #E5E7EB;
     --valid-color: #3C37CC;
-    --error-color: #E22121;
+    --error-color: #e22121;
     --grey-color: #64655F;
 }
 
@@ -110,6 +110,28 @@ input {
     padding: 5px;
     border-radius: 5px;
     border: 1px solid var(--input-color);
+    font-size: 12px;
+}
+
+input:focus:valid {
+    box-shadow: rgba(60, 55, 204, 0.7) 0px 5px 15px;
+}
+
+input:focus:invalid {
+    box-shadow: rgba(226, 33, 33, 0.7) 0px 5px 15px;
+}
+
+input:not(:focus):not(:placeholder-shown):invalid {
+    border-color: var(--error-color);
+  }
+
+input:not(:focus):not(:placeholder-shown):valid {
+    border-color: var(--valid-color);
+  }
+
+.error {
+    display: none;
+    color: var(--error-color);
     font-size: 12px;
 }
 
